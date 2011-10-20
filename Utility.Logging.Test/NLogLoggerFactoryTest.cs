@@ -21,7 +21,7 @@ namespace Utility.Logging.Test
     }
 
     [Test]
-    public void CanCreateLoggerFromCurrentClass()
+    public void CanCreateLoggerFromCurrentClassWithLoggerFactory()
     {
       var loggerFactory = new NLogLoggerFactory();
 
@@ -32,7 +32,7 @@ namespace Utility.Logging.Test
     }
 
     [Test]
-    public void CanCreateLoggerFromType()
+    public void CanCreateLoggerFromTypeWithLoggerFactory()
     {
       var loggerFactory = new NLogLoggerFactory();
 
@@ -43,11 +43,48 @@ namespace Utility.Logging.Test
     }
 
     [Test]
-    public void CanCreateLoggerFromName()
+    public void CanCreateLoggerFromNameWithLoggerFactory()
     {
       var loggerFactory = new NLogLoggerFactory();
 
       var logger = loggerFactory.GetLogger("logger name");
+
+      Assert.NotNull(logger);
+      Assert.AreEqual("logger name", logger.Name);
+    }
+
+
+    [Test]
+    public void CanCreateLoggerFromCurrentClassWithLogger()
+    {
+      var loggerFactory = new NLogLoggerFactory();
+      var testLogger = loggerFactory.GetLogger("TestLogger");
+
+      var logger = testLogger.GetCurrentClassLogger();
+
+      Assert.NotNull(logger);
+      Assert.AreEqual(GetType().FullName, logger.Name);
+    }
+
+    [Test]
+    public void CanCreateLoggerFromTypeWithLogger()
+    {
+      var loggerFactory = new NLogLoggerFactory();
+      var testLogger = loggerFactory.GetLogger("TestLogger");
+
+      var logger = testLogger.GetLogger(GetType());
+
+      Assert.NotNull(logger);
+      Assert.AreEqual(GetType().FullName, logger.Name);
+    }
+
+    [Test]
+    public void CanCreateLoggerFromNameWithLogge()
+    {
+      var loggerFactory = new NLogLoggerFactory();
+      var testLogger = loggerFactory.GetLogger("TestLogger");
+
+      var logger = testLogger.GetLogger("logger name");
 
       Assert.NotNull(logger);
       Assert.AreEqual("logger name", logger.Name);

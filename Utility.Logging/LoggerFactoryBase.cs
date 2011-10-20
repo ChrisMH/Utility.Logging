@@ -16,10 +16,10 @@ namespace Utility.Logging
 
     // This method relies on the stack to retrieve the current class, so preventing inlining is required.
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public ILogger GetCurrentClassLogger()
+    public ILogger GetCurrentClassLogger(int skipFrames = 1)
     {
       // Go up one call on the frame and get the type that declares that method.
-      var stackFrame = new StackFrame(1, false);
+      var stackFrame = new StackFrame(skipFrames, false);
       return GetLogger(stackFrame.GetMethod().DeclaringType);
     }
 

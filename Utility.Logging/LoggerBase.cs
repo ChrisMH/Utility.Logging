@@ -1,14 +1,17 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 namespace Utility.Logging
 {
   public abstract class LoggerBase : ILogger, IDisposable
   {
-    protected LoggerBase(string name)
+    protected LoggerBase(string name, ILoggerFactory factory)
     {
       if (name == null) throw new ArgumentException("name not supplied", "name");
 
       Name = name;
+      this.factory = factory;
     }
 
     public void Dispose()
@@ -42,5 +45,25 @@ namespace Utility.Logging
     public abstract bool IsWarnEnabled { get; }
 
     public string Name { get; private set; }
+
+    // This method relies on the stack to retrieve the current class, so preventing inlining is required.
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public ILogger GetCurrentClassLogger()
+    {
+      return factory.GetCurrentClassLogger(2);
+    }
+
+    public ILogger GetLogger(Type type)
+    {
+      return factory.GetLogger(type);
+    }
+
+    public ILogger GetLogger(string name)
+    {
+      return factory.GetLogger(name);
+    }
+
+
+    private ILoggerFactory factory;
   }
 }
