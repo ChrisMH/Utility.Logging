@@ -7,8 +7,9 @@ namespace Utility.Logging
     /// <summary>
     /// Get a logger for the class that called this method
     /// </summary>
+    /// <param name="skipFrames">Number of stack frames to skip to get to the initiating call</param>
     /// <returns>The logger</returns>
-    ILogger GetCurrentClassLogger();
+    ILogger GetCurrentClassLogger(int skipFrames = 1);
 
     /// <summary>
     /// Gets a logger named for a specific type

@@ -30,5 +30,9 @@ namespace Utility.Logging
     bool IsWarnEnabled { get; }
 
     string Name { get; }
+
+    ILogger GetCurrentClassLogger();
+    ILogger GetLogger(Type type);
+    ILogger GetLogger(string name);
   }
 }

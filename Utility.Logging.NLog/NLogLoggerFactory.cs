@@ -4,7 +4,7 @@
   {
     protected override ILogger CreateLogger(string name)
     {
-      return new NLogLogger(name, global::NLog.LogManager.GetLogger(name));
+      return new NLogLogger(name, this);
     }
   }
 }

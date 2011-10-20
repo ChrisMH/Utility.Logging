@@ -4,10 +4,10 @@ namespace Utility.Logging.NLog
 {
   public class NLogLogger : LoggerBase
   {
-    internal NLogLogger(string name, global::NLog.Logger logger)
-      : base(name)
+    internal NLogLogger(string name, ILoggerFactory factory)
+      : base(name, factory)
     {
-      _logger = logger;
+      logger = global::NLog.LogManager.GetLogger(name);
     }
 
     public override void Debug(string message, params object[] parameters)
@@ -84,40 +84,40 @@ namespace Utility.Logging.NLog
 
     public override bool IsDebugEnabled
     {
-      get { return _logger.IsDebugEnabled; }
+      get { return logger.IsDebugEnabled; }
     }
 
     public override bool IsErrorEnabled
     {
-      get { return _logger.IsErrorEnabled; }
+      get { return logger.IsErrorEnabled; }
     }
 
     public override bool IsFatalEnabled
     {
-      get { return _logger.IsFatalEnabled; }
+      get { return logger.IsFatalEnabled; }
     }
 
     public override bool IsInfoEnabled
     {
-      get { return _logger.IsInfoEnabled; }
+      get { return logger.IsInfoEnabled; }
     }
 
     public override bool IsTraceEnabled
     {
-      get { return _logger.IsTraceEnabled; }
+      get { return logger.IsTraceEnabled; }
     }
 
     public override bool IsWarnEnabled
     {
-      get { return _logger.IsWarnEnabled; }
+      get { return logger.IsWarnEnabled; }
     }
 
     protected void Log(global::NLog.LogLevel logLevel, Exception exception, string message, params object[] parameters)
     {
       var logEvent = new global::NLog.LogEventInfo(logLevel, Name, null, message, parameters, exception);
-      _logger.Log(logEvent);
+      logger.Log(logEvent);
     }
 
-    private readonly global::NLog.Logger _logger;
+    private readonly global::NLog.Logger logger;
   }
 }
