@@ -1,9 +1,9 @@
 ﻿using System;
-using Common.Logging.NLog;
+using Utility.Logging.NLog;
 using NUnit.Framework;
 using Ninject;
 
-namespace Common.Logging.Test
+namespace Utility.Logging.Test
 {
   public class NLogLoggerTest
   {

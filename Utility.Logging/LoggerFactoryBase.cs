@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
-namespace Common.Logging
+namespace Utility.Logging
 {
   public abstract class LoggerFactoryBase : ILoggerFactory
   {

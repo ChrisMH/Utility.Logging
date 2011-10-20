@@ -1,12 +1,12 @@
 ﻿using System.Linq;
-using Common.Logging.NLog;
+using Utility.Logging.NLog;
 using Moq;
 using NUnit.Framework;
 using Ninject;
 using Ninject.Activation;
 using Ninject.Planning.Targets;
 
-namespace Common.Logging.Test
+namespace Utility.Logging.Test
 {
   public class NLogLoggerFactoryTest
   {

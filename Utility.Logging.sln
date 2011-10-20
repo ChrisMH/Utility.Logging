@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging", "Common.Logging\Common.Logging.csproj", "{999140E4-6801-46F6-914D-5F9BFA41A166}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging", "Utility.Logging\Utility.Logging.csproj", "{999140E4-6801-46F6-914D-5F9BFA41A166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.Test", "Common.Logging.Test\Common.Logging.Test.csproj", "{06649CFD-A5F8-4FC2-8473-885C0B4F93B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.Test", "Utility.Logging.Test\Utility.Logging.Test.csproj", "{06649CFD-A5F8-4FC2-8473-885C0B4F93B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging.NLog", "Common.Logging.NLog\Common.Logging.NLog.csproj", "{1F663412-95F8-4A98-827B-9024305655F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog", "Utility.Logging.NLog\Utility.Logging.NLog.csproj", "{1F663412-95F8-4A98-827B-9024305655F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

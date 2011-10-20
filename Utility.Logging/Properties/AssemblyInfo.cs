@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Common.Logging.Test")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Utility.Logging")]
+[assembly: AssemblyDescription("Logging interfaces and base classes")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Logikos")]
-[assembly: AssemblyProduct("Common.Logging.Test")]
-[assembly: AssemblyCopyright("Copyright © Logikos 2011")]
+[assembly: AssemblyCompany("Chris Hogan")]
+[assembly: AssemblyProduct("Utility.Logging")]
+[assembly: AssemblyCopyright("Copyright © Chris Hogan 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("be4fe991-8632-4c01-a2bd-e2de73aaf2f7")]
+[assembly: Guid("99d1f8b3-1123-4612-b691-34456ab08a90")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]

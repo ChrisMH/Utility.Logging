@@ -1,6 +1,6 @@
 ﻿using Ninject.Modules;
 
-namespace Common.Logging.NLog
+namespace Utility.Logging.NLog
 {
   /// <summary>
   /// Ninject module to load factory and logger for NLog2.

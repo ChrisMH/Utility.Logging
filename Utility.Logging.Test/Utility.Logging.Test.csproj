@@ -8,8 +8,8 @@
     <ProjectGuid>{06649CFD-A5F8-4FC2-8473-885C0B4F93B7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common.Logging.Test</RootNamespace>
-    <AssemblyName>Common.Logging.Test</AssemblyName>
+    <RootNamespace>Utility.Logging.Test</RootNamespace>
+    <AssemblyName>Utility.Logging.Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -74,11 +74,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common.Logging.NLog\Common.Logging.NLog.csproj">
+    <ProjectReference Include="..\Utility.Logging.NLog\Utility.Logging.NLog.csproj">
       <Project>{1F663412-95F8-4A98-827B-9024305655F7}</Project>
       <Name>Common.Logging.NLog</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Common.Logging\Common.Logging.csproj">
+    <ProjectReference Include="..\Utility.Logging\Utility.Logging.csproj">
       <Project>{999140E4-6801-46F6-914D-5F9BFA41A166}</Project>
       <Name>Common.Logging</Name>
     </ProjectReference>

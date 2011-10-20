@@ -8,8 +8,8 @@
     <ProjectGuid>{999140E4-6801-46F6-914D-5F9BFA41A166}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common.Logging</RootNamespace>
-    <AssemblyName>Common.Logging</AssemblyName>
+    <RootNamespace>Utility.Logging</RootNamespace>
+    <AssemblyName>Utility.Logging</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

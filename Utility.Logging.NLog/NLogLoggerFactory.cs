@@ -1,4 +1,4 @@
-﻿namespace Common.Logging.NLog
+﻿namespace Utility.Logging.NLog
 {
   public class NLogLoggerFactory : LoggerFactoryBase
   {

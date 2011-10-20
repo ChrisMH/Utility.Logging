@@ -8,8 +8,8 @@
     <ProjectGuid>{1F663412-95F8-4A98-827B-9024305655F7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common.Logging.NLog</RootNamespace>
-    <AssemblyName>Common.Logging.NLog</AssemblyName>
+    <RootNamespace>Utility.Logging.NLog</RootNamespace>
+    <AssemblyName>Utility.Logging.NLog</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,7 +48,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Common.Logging.NLog.nuspec" />
     <None Include="content\nlog.desktop.config" />
     <None Include="content\nlog.web.config" />
     <None Include="content\NLogLoggerModule.cs.pp">
@@ -57,7 +56,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common.Logging\Common.Logging.csproj">
+    <ProjectReference Include="..\Utility.Logging\Utility.Logging.csproj">
       <Project>{999140E4-6801-46F6-914D-5F9BFA41A166}</Project>
       <Name>Common.Logging</Name>
     </ProjectReference>
