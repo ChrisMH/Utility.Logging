@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="NLogLogger.cs" />
     <Compile Include="NLogLoggerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -50,15 +53,12 @@
   <ItemGroup>
     <None Include="content\nlog.desktop.config" />
     <None Include="content\nlog.web.config" />
-    <None Include="content\NLogLoggerModule.cs.pp">
-      <SubType>Code</SubType>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Utility.Logging\Utility.Logging.csproj">
       <Project>{999140E4-6801-46F6-914D-5F9BFA41A166}</Project>
-      <Name>Common.Logging</Name>
+      <Name>Utility.Logging</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

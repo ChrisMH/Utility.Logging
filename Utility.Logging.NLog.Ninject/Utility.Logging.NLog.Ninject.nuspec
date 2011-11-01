@@ -11,7 +11,7 @@
     <copyright>Copyright 2011</copyright>
     <tags>Logging</tags>
     <dependencies>
-      <dependency id="Utility.Logging"/>
+      <dependency id="Utility.Logging.NLog" />
     </dependencies>
   </metadata>
   <files>
