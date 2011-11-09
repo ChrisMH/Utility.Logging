@@ -3,6 +3,5 @@
 [assembly: AssemblyTitle("Utility.Logging")]
 [assembly: AssemblyDescription("Logging interfaces and base classes")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("Utility.Logging")]
 
 

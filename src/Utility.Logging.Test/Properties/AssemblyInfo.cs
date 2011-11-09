@@ -3,5 +3,5 @@
 [assembly: AssemblyTitle("Utility.Logging.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("Utility.Logging.Test")]
+
 

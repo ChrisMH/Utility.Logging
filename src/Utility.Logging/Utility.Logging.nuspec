@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
+    <id>Utility.Logging</id>
     <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <title>Utility.Logging</title>
+    <authors>Chris Hogan</authors>
+    <owners>Chris Hogan</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>https://github.com/ChrisMH/Utility.Logging</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
+    <description>General base interfaces and classes for logging</description>
     <copyright>Copyright 2011</copyright>
-    <tags>Logging</tags>
+    <tags>utility logging</tags>
   </metadata>
 </package>

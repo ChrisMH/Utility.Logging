@@ -9,11 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog", "Uti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog.Ninject", "Utility.Logging.NLog.Ninject\Utility.Logging.NLog.Ninject.csproj", "{86F5DFDA-E122-4263-ADE0-5BAC81EB85FB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonFiles", "CommonFiles", "{DA0B9388-CBFE-4339-B238-2EF3E889EE5C}"
-	ProjectSection(SolutionItems) = preProject
-		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
