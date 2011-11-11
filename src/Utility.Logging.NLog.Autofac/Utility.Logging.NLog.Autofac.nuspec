@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Utility.Logging.NLog.Ninject</id>
+    <id>Utility.Logging.NLog.Autofac</id>
     <version>$version$</version>
-    <title>Utility.Logging.NLog.Ninject</title>
+    <title>Utility.Logging.NLog.Autofac</title>
     <authors>Chris Hogan</authors>
     <owners>Chris Hogan</owners>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
     <projectUrl>https://github.com/ChrisMH/Utility.Logging</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Ninject module to register NLog Utility.Logging components</description>
+    <description>Autofac module to register NLog Utility.Logging components</description>
     <copyright>Copyright 2011</copyright>
     <tags>utility logging nlog</tags>
     <dependencies>
       <dependency id="Utility.Logging.NLog" version="$version$" />
-      <dependency id="Ninject" version="2.2.1.4" />
+      <dependency id="Autofac" version="2.5.2.830" />
     </dependencies>
   </metadata>
   <files>

@@ -17,6 +17,12 @@ $pushFile = $buildPath + $packageName + "." + $matches.version + ".nupkg"
 &$nuget delete $packageName $matches.version -NoPrompt
 &$nuget push $pushFile
 
+#Utility.Logging.NLog.Autofac
+$packageName = "Utility.Logging.NLog.Autofac"
+$pushFile = $buildPath + $packageName + "." + $matches.version + ".nupkg"
+&$nuget delete $packageName $matches.version -NoPrompt
+&$nuget push $pushFile
+
 #Utility.Logging.NLog.Ninject
 $packageName = "Utility.Logging.NLog.Ninject"
 $pushFile = $buildPath + $packageName + "." + $matches.version + ".nupkg"

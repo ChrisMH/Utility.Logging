@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog", "Uti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog.Ninject", "Utility.Logging.NLog.Ninject\Utility.Logging.NLog.Ninject.csproj", "{86F5DFDA-E122-4263-ADE0-5BAC81EB85FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog.Autofac", "Utility.Logging.NLog.Autofac\Utility.Logging.NLog.Autofac.csproj", "{B741E88B-066D-4E42-8CA2-D24633BC86D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{86F5DFDA-E122-4263-ADE0-5BAC81EB85FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86F5DFDA-E122-4263-ADE0-5BAC81EB85FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86F5DFDA-E122-4263-ADE0-5BAC81EB85FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B741E88B-066D-4E42-8CA2-D24633BC86D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B741E88B-066D-4E42-8CA2-D24633BC86D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B741E88B-066D-4E42-8CA2-D24633BC86D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B741E88B-066D-4E42-8CA2-D24633BC86D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{86F5DFDA-E122-4263-ADE0-5BAC81EB85FB}</ProjectGuid>
+    <ProjectGuid>{B741E88B-066D-4E42-8CA2-D24633BC86D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Utility.Logging.NLog.Ninject</RootNamespace>
-    <AssemblyName>Utility.Logging.NLog.Ninject</AssemblyName>
+    <RootNamespace>Utility.Logging.NLog.Autofac</RootNamespace>
+    <AssemblyName>Utility.Logging.NLog.Autofac</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,19 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="content\NLogLoggerModule.cs.pp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Utility.Logging.NLog\Utility.Logging.NLog.csproj">
-      <Project>{1F663412-95F8-4A98-827B-9024305655F7}</Project>
-      <Name>Utility.Logging.NLog</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

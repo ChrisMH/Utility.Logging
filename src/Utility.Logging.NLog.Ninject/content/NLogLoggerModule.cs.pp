@@ -1,5 +1,4 @@
-﻿
-using Utility.Logging;
+﻿using Utility.Logging;
 using Utility.Logging.NLog;
 using Ninject.Modules;
 

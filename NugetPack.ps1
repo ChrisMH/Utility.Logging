@@ -18,6 +18,18 @@ $packageName = "Utility.Logging.NLog"
 $packFile = $srcPath + $packageName + "\" + $packageName + ".csproj";
 &$nuget pack $packFile -Version $matches.version -Build -Properties Configuration=Release -OutputDirectory $buildPath
 
+#Utility.Logging.NLog.Autofac
+#Remove binary directories so that they don't get included in the nupkg.  This is a content-only package.
+$packageName = "Utility.Logging.NLog.Autofac"
+$packFile = $srcPath + $packageName + "\" + $packageName + ".nuspec";
+
+$binPath = $srcPath + $packageName +"\bin"
+if (test-path $binPath) { remove-item -Recurse -Force $binPath }
+$objPath = $srcPath + $packageName +"\obj"
+if (test-path $objPath) { remove-item -Recurse -Force $objPath }
+
+&$nuget pack $packFile -Version $matches.version -OutputDirectory $buildPath
+
 #Utility.Logging.NLog.Ninject
 #Remove binary directories so that they don't get included in the nupkg.  This is a content-only package.
 $packageName = "Utility.Logging.NLog.Ninject"
