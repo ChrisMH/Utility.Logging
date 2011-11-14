@@ -12,6 +12,7 @@ function Get-Version($srcRoot, $versionFile)
 
 function Push-Project($packageName, $srcRoot, $version, $outputPath, $nugetCmd)
 {
+  "`nPushing Package : $packageName"
   $pushFile = Join-Path $outputPath "$packageName.$version.nupkg" -Resolve
   &$nugetCmd delete $packageName $version -NoPrompt
   &$nugetCmd push $pushFile

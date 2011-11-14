@@ -12,6 +12,7 @@ function Get-Version($srcRoot, $versionFile)
 
 function Pack-Project($packageName, $srcRoot, $version, $outputPath, $nugetCmd)
 {
+  "`nBuilding Package : $packageName"
   $projectRoot = Join-Path $srcRoot $packageName -Resolve
   $packFile = Join-Path $projectRoot "$packageName.csproj" -Resolve
   &$nugetCmd pack $packFile -Version $version -Build -Properties Configuration=Release -OutputDirectory $outputPath
@@ -19,14 +20,15 @@ function Pack-Project($packageName, $srcRoot, $version, $outputPath, $nugetCmd)
 
 function Pack-ContentProject($packageName, $srcRoot, $version, $outputPath, $nugetCmd)
 {
+  "`nBuilding Content Package : $packageName"
   $projectRoot = Join-Path $srcRoot $packageName -Resolve
   $packFile = Join-Path $projectRoot "$packageName.nuspec" -Resolve
 
   #Remove binary directories so that they don't get included in the nupkg.  This is a content-only package.
   $binPath = "$projectRoot\bin"
-  if (Test-Path $binPath) { Remove-Item $binPath -Recurse -Force }
+  if (Test-Path $binPath) { Remove-Item $binPath -Recurse -Force | Out-Null }
   $objPath = "$projectRoot\obj"
-  if (Test-Path $objPath) { Remove-Item $objPat -Recurse -Force }
+  if (Test-Path $objPath) { Remove-Item $objPat -Recurse -Force | Out-Null }
 
   &$nugetCmd pack $packFile -Version $version -OutputDirectory $outputPath
 }
