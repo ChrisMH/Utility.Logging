@@ -1,30 +1,26 @@
-$srcPath = ".\src\"
-$buildPath = ".\build\"
-$versionFile = $srcPath + "SharedAssemblyInfo.cs"
-$nuget = ".\tools\nuget\nuget.exe"
+$srcRoot = '.\src'                     # relative to script directory
+$versionFile = 'SharedAssemblyInfo.cs' # relative to $srcRoot
+$outputPath = '.\build'                # relative to script directory
+$nugetCmd = '.\tools\nuget\nuget.exe'  # relative to script directory
 
-get-content $versionFile | where-object { $_ -match '^\[\s*assembly:\s*AssemblyVersion\s*\(\s*\"(?<version>[\d\.]*)\"\s*\)\s*\]' } | out-null
+function Get-Version($srcRoot, $versionFile)
+{
+  $versionFile = Join-Path $srcRoot $versionFile -Resolve
+  Get-Content $versionFile | Where-Object { $_ -match '^\[\s*assembly:\s*AssemblyVersion\s*\(\s*\"(?<version>[\d\.]*)\"\s*\)\s*\]' } | out-null
+  return $matches.version
+}
 
-#Utility.Logging
-$packageName = "Utility.Logging"
-$pushFile = $buildPath + $packageName + "." + $matches.version + ".nupkg"
-&$nuget delete $packageName $matches.version -NoPrompt
-&$nuget push $pushFile
+function Push-Project($packageName, $srcRoot, $version, $outputPath, $nugetCmd)
+{
+  $pushFile = Join-Path $outputPath "$packageName.$version.nupkg" -Resolve
+  &$nugetCmd delete $packageName $version -NoPrompt
+  &$nugetCmd push $pushFile
+}
 
-#Utility.Logging.NLog
-$packageName = "Utility.Logging.NLog"
-$pushFile = $buildPath + $packageName + "." + $matches.version + ".nupkg"
-&$nuget delete $packageName $matches.version -NoPrompt
-&$nuget push $pushFile
 
-#Utility.Logging.NLog.Autofac
-$packageName = "Utility.Logging.NLog.Autofac"
-$pushFile = $buildPath + $packageName + "." + $matches.version + ".nupkg"
-&$nuget delete $packageName $matches.version -NoPrompt
-&$nuget push $pushFile
+$version = Get-Version $srcRoot $versionFile
 
-#Utility.Logging.NLog.Ninject
-$packageName = "Utility.Logging.NLog.Ninject"
-$pushFile = $buildPath + $packageName + "." + $matches.version + ".nupkg"
-&$nuget delete $packageName $matches.version -NoPrompt
-&$nuget push $pushFile
+Push-Project "Utility.Logging" $srcRoot $version $outputPath $nugetCmd
+Push-Project "Utility.Logging.NLog" $srcRoot $version $outputPath $nugetCmd
+Push-Project "Utility.Logging.NLog.Autofac" $srcRoot $version $outputPath $nugetCmd
+Push-Project "Utility.Logging.NLog.Ninject" $srcRoot $version $outputPath $nugetCmd
