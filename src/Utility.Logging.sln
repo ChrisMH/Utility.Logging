@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog.Ninjec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog.Autofac", "Utility.Logging.NLog.Autofac\Utility.Logging.NLog.Autofac.csproj", "{B741E88B-066D-4E42-8CA2-D24633BC86D4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A1699005-DD22-4E6A-AED3-5A636B00B80D}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

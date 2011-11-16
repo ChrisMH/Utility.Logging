@@ -6,7 +6,7 @@ using Utility.Logging.NLog;
 
 namespace $rootnamespace$
 {
-  public class NLogLoggerModule : Module
+  public class NLogLoggerAutofacModule : Module
   {
     protected override void AttachToComponentRegistration(IComponentRegistry componentRegistry, IComponentRegistration registration)
     {

@@ -7,7 +7,7 @@ namespace $rootnamespace$
   /// <summary>
   /// Ninject module to load factory and logger for NLog.
   /// </summary>
-  public class NLogLoggerModule : NinjectModule
+  public class NLogLoggerNinjectModule : NinjectModule
   {
     public override void Load()
     {
