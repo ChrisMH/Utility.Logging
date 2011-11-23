@@ -1,14 +1,14 @@
 $srcRoot = '.\src'                     # relative to script directory
 $versionFile = 'SharedAssemblyInfo.cs' # relative to $srcRoot
 $outputPath = "$home\Dropbox\Packages"
-$scriptRoot = "$home\Dropbox\Scripts"
 
-. "$scriptRoot\New-Path.ps1" $outputPath
+Import-Module NugetUtilities
 
-$version = . "$scriptRoot\Get-Version.ps1" (Join-Path $srcRoot $versionFile -Resolve)
+New-Path $outputPath
 
-. "$scriptRoot\Pack-Project.ps1" Utility.Logging $srcRoot $version $outputPath
-. "$scriptRoot\Pack-Project.ps1" Utility.Logging.NLog $srcRoot $version $outputPath
-. "$scriptRoot\Pack-ContentProject.ps1" Utility.Logging.NLog.Autofac $srcRoot $version $outputPath
-. "$scriptRoot\Pack-ContentProject.ps1" Utility.Logging.NLog.Ninject $srcRoot $version $outputPath
+$version = Get-Version (Join-Path $srcRoot $versionFile)
 
+Pack-Project Utility.Logging $srcRoot $version $outputPath
+Pack-Project Utility.Logging.NLog $srcRoot $version $outputPath
+Pack-ContentProject Utility.Logging.NLog.Autofac $srcRoot $version $outputPath
+Pack-ContentProject Utility.Logging.NLog.Ninject $srcRoot $version $outputPath
