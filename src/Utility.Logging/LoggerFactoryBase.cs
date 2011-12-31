@@ -20,7 +20,7 @@ namespace Utility.Logging
     {
       // Go up one call on the frame and get the type that declares that method.
       var stackFrame = new StackFrame(skipFrames, false);
-      return GetLogger(stackFrame.GetMethod().DeclaringType);
+      return GetLogger(stackFrame.GetMethod().GetType().Name);
     }
 
     public ILogger GetLogger(Type type)

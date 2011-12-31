@@ -14,7 +14,7 @@
     <tags>utility logging nlog</tags>
     <dependencies>
       <dependency id="Utility.Logging.NLog" version="$version$" />
-      <dependency id="Autofac" version="2.5.2.830" />
+      <dependency id="Autofac"/>
     </dependencies>
   </metadata>
   <files>

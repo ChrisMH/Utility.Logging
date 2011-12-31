@@ -51,8 +51,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="content\nlog.desktop.config" />
-    <None Include="content\nlog.web.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

@@ -14,10 +14,6 @@
     <tags>utility logging nlog</tags>
     <dependencies>
       <dependency id="Utility.Logging" version="$version$"/>
-      <dependency id="NLog" version="2.0.0.2000"/>
     </dependencies>
   </metadata>
-  <files>
-    <file src="content\*.*" target="content"/>
-  </files>
 </package>
