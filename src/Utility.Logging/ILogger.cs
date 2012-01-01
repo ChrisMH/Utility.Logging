@@ -31,7 +31,7 @@ namespace Utility.Logging
 
     string Name { get; }
 
-    ILogger GetCurrentClassLogger();
+    ILogger GetCurrentInstanceLogger();
     ILogger GetLogger(Type type);
     ILogger GetLogger(string name);
   }

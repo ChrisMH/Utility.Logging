@@ -48,9 +48,9 @@ namespace Utility.Logging
 
     // This method relies on the stack to retrieve the current class, so preventing inlining is required.
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public ILogger GetCurrentClassLogger()
+    public ILogger GetCurrentInstanceLogger()
     {
-      return factory.GetCurrentClassLogger(2);
+      return factory.GetCurrentInstanceLogger(2);
     }
 
     public ILogger GetLogger(Type type)

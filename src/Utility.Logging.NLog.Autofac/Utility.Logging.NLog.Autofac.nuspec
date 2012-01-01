@@ -13,11 +13,8 @@
     <copyright>Copyright 2011</copyright>
     <tags>utility logging nlog</tags>
     <dependencies>
+      <dependency id="Utility.Logging" version="$version$" />
       <dependency id="Utility.Logging.NLog" version="$version$" />
-      <dependency id="Autofac"/>
     </dependencies>
   </metadata>
-  <files>
-    <file src="content\*.*" target="content"/>
-  </files>
 </package>

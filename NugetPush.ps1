@@ -9,4 +9,3 @@ $version = Get-Version (Join-Path $srcRoot $versionFile)
 Push-Project Utility.Logging $srcRoot $version $outputPath
 Push-Project Utility.Logging.NLog $srcRoot $version $outputPath
 Push-Project Utility.Logging.NLog.Autofac $srcRoot $version $outputPath
-Push-Project Utility.Logging.NLog.Ninject $srcRoot $version $outputPath

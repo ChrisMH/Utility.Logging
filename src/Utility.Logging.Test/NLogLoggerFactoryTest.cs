@@ -1,34 +1,19 @@
-﻿using System.Linq;
+﻿using NUnit.Framework;
 using Utility.Logging.NLog;
-using Moq;
-using NUnit.Framework;
-using Ninject;
-using Ninject.Activation;
-using Ninject.Planning.Targets;
 
 namespace Utility.Logging.Test
 {
   public class NLogLoggerFactoryTest
   {
     [Test]
-    public void CanRetrieveLoggerFactoryFromKernel()
-    {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-
-      var result = kernel.Get<ILoggerFactory>();
-
-      Assert.NotNull(result);
-    }
-
-    [Test]
     public void CanCreateLoggerFromCurrentClassWithLoggerFactory()
     {
       var loggerFactory = new NLogLoggerFactory();
 
-      var logger = loggerFactory.GetCurrentClassLogger();
+      var logger = loggerFactory.GetCurrentInstanceLogger();
 
       Assert.NotNull(logger);
-      Assert.AreEqual(GetType().FullName, logger.Name);
+      Assert.AreEqual(GetType().Name, logger.Name);
     }
 
     [Test]
@@ -39,7 +24,7 @@ namespace Utility.Logging.Test
       var logger = loggerFactory.GetLogger(GetType());
 
       Assert.NotNull(logger);
-      Assert.AreEqual(GetType().FullName, logger.Name);
+      Assert.AreEqual(GetType().Name, logger.Name);
     }
 
     [Test]
@@ -55,15 +40,15 @@ namespace Utility.Logging.Test
 
 
     [Test]
-    public void CanCreateLoggerFromCurrentClassWithLogger()
+    public void CanCreateLoggerFromCurrentInstanceWithLogger()
     {
       var loggerFactory = new NLogLoggerFactory();
       var testLogger = loggerFactory.GetLogger("TestLogger");
 
-      var logger = testLogger.GetCurrentClassLogger();
+      var logger = testLogger.GetCurrentInstanceLogger();
 
       Assert.NotNull(logger);
-      Assert.AreEqual(GetType().FullName, logger.Name);
+      Assert.AreEqual(GetType().Name, logger.Name);
     }
 
     [Test]
@@ -75,11 +60,11 @@ namespace Utility.Logging.Test
       var logger = testLogger.GetLogger(GetType());
 
       Assert.NotNull(logger);
-      Assert.AreEqual(GetType().FullName, logger.Name);
+      Assert.AreEqual(GetType().Name, logger.Name);
     }
 
     [Test]
-    public void CanCreateLoggerFromNameWithLogge()
+    public void CanCreateLoggerFromNameWithLogger()
     {
       var loggerFactory = new NLogLoggerFactory();
       var testLogger = loggerFactory.GetLogger("TestLogger");
@@ -89,6 +74,5 @@ namespace Utility.Logging.Test
       Assert.NotNull(logger);
       Assert.AreEqual("logger name", logger.Name);
     }
-
   }
 }

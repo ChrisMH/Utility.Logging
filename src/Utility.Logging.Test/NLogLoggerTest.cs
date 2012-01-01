@@ -1,131 +1,105 @@
 ﻿using System;
-using Utility.Logging.NLog;
 using NUnit.Framework;
-using Ninject;
+using Utility.Logging.NLog;
 
 namespace Utility.Logging.Test
 {
   public class NLogLoggerTest
   {
     [Test]
-    public void CanInjectLogger()
-    {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
-
-      Assert.NotNull(Logger);
-      Assert.AreEqual(GetType().FullName, Logger.Name);
-    }
-
-    [Test]
     public void CanLogDebugMessage()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Debug("log: {0}", "can_log_debug_message");
+      logger.Debug("log: {0}", "can_log_debug_message");
     }
 
     [Test]
     public void CanLogDebugMessageWithException()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Debug("log: {0}", "can_log_debug_message_with_exception", new Exception("log exception"));
+      logger.Debug("log: {0}", "can_log_debug_message_with_exception", new Exception("log exception"));
     }
 
     [Test]
     public void CanLogErrorMessage()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Error("log: {0}", "can_log_error_message");
+      logger.Error("log: {0}", "can_log_error_message");
     }
 
     [Test]
     public void CanLogErrorMessageWithException()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Error("log: {0}", "can_log_error_message_with_exception", new Exception("log exception"));
+      logger.Error("log: {0}", "can_log_error_message_with_exception", new Exception("log exception"));
     }
 
     [Test]
     public void CanLogFatalMessage()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Fatal("log: {0}", "can_log_fatal_message");
+      logger.Fatal("log: {0}", "can_log_fatal_message");
     }
 
     [Test]
     public void CanLogFatalMessageWithException()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Fatal("log: {0}", "can_log_fatal_message_with_exception", new Exception("log exception"));
+      logger.Fatal("log: {0}", "can_log_fatal_message_with_exception", new Exception("log exception"));
     }
 
     [Test]
     public void CanLogInfoMessage()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Info("log: {0}", "can_log_info_message");
+      logger.Info("log: {0}", "can_log_info_message");
     }
 
     [Test]
     public void CanLogInfoMessageWithException()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Info("log: {0}", "can_log_info_message_with_exception", new Exception("log exception"));
+      logger.Info("log: {0}", "can_log_info_message_with_exception", new Exception("log exception"));
     }
 
     [Test]
     public void CanLogTraceMessage()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Trace("log: {0}", "can_log_trace_message");
+      logger.Trace("log: {0}", "can_log_trace_message");
     }
 
     [Test]
     public void CanLogTraceMessageWithException()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Trace("log: {0}", "can_log_trace_message_with_exception", new Exception("log exception"));
+      logger.Trace("log: {0}", "can_log_trace_message_with_exception", new Exception("log exception"));
     }
 
     [Test]
     public void CanLogWarnMessage()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Warn("log: {0}", "can_log_warn_message");
+      logger.Warn("log: {0}", "can_log_warn_message");
     }
 
     [Test]
     public void CanLogWarnMessageWithException()
     {
-      var kernel = new StandardKernel(new NLogLoggerModule());
-      kernel.Inject(this);
+      var logger = new NLogLoggerFactory().GetCurrentInstanceLogger();
 
-      Logger.Warn("log: {0}", "can_log_warn_message_with_exception", new Exception("log exception"));
+      logger.Warn("log: {0}", "can_log_warn_message_with_exception", new Exception("log exception"));
     }
-
-    [Inject]
-    public ILogger Logger { get; set; }
   }
 }

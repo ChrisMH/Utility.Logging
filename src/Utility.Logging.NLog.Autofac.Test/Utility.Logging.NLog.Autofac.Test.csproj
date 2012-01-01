@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{06649CFD-A5F8-4FC2-8473-885C0B4F93B7}</ProjectGuid>
+    <ProjectGuid>{29A25C45-872E-4207-8B2D-E67800B33880}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Utility.Logging.Test</RootNamespace>
-    <AssemblyName>Utility.Logging.Test</AssemblyName>
+    <RootNamespace>Utility.Logging.NLog.Autofac.Test</RootNamespace>
+    <AssemblyName>Utility.Logging.NLog.Autofac.Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\packages\Autofac.2.5.2.830\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
     <Reference Include="NLog">
       <HintPath>..\packages\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
     </Reference>
@@ -53,11 +58,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="NLogLoggerFactoryTest.cs" />
-    <Compile Include="NLogLoggerTest.cs" />
+    <Compile Include="ConstructorInjectedLoggerTest.cs" />
+    <Compile Include="LoggableBase.cs" />
+    <Compile Include="LoggableDerived.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +71,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Utility.Logging.NLog.Autofac\Utility.Logging.NLog.Autofac.csproj">
+      <Project>{B741E88B-066D-4E42-8CA2-D24633BC86D4}</Project>
+      <Name>Utility.Logging.NLog.Autofac</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utility.Logging.NLog\Utility.Logging.NLog.csproj">
       <Project>{1F663412-95F8-4A98-827B-9024305655F7}</Project>
       <Name>Utility.Logging.NLog</Name>
