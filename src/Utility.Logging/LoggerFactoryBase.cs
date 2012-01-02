@@ -25,7 +25,7 @@ namespace Utility.Logging
 
     public ILogger GetLogger(Type type)
     {
-      return GetLogger(type.Name);
+      return GetLogger(type.FullName);
     }
 
     public ILogger GetLogger(string name)

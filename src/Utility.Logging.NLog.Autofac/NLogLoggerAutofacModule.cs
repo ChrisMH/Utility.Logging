@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Autofac;
 using Autofac.Core;
+using Autofac.Core.Activators.Reflection;
 
 namespace Utility.Logging.NLog.Autofac
 {
@@ -13,6 +14,8 @@ namespace Utility.Logging.NLog.Autofac
 
     static void OnComponentPreparing(object sender, PreparingEventArgs e)
     {
+      if(e.Component.Activator.GetType() != typeof(ReflectionActivator)) return;
+
       var t = e.Component.Activator.LimitType;
       e.Parameters = e.Parameters.Union(new[]
         {

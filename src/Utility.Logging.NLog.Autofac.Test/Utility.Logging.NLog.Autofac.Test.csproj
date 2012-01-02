@@ -59,9 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConstructorInjectedLoggerTest.cs" />
-    <Compile Include="LoggableBase.cs" />
-    <Compile Include="LoggableDerived.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestClasses.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\nlog.configs\Desktop\nlog.config">

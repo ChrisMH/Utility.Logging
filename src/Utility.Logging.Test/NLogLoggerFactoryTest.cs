@@ -13,7 +13,7 @@ namespace Utility.Logging.Test
       var logger = loggerFactory.GetCurrentInstanceLogger();
 
       Assert.NotNull(logger);
-      Assert.AreEqual(GetType().Name, logger.Name);
+      Assert.AreEqual(GetType().FullName, logger.Name);
     }
 
     [Test]
@@ -24,7 +24,7 @@ namespace Utility.Logging.Test
       var logger = loggerFactory.GetLogger(GetType());
 
       Assert.NotNull(logger);
-      Assert.AreEqual(GetType().Name, logger.Name);
+      Assert.AreEqual(GetType().FullName, logger.Name);
     }
 
     [Test]
@@ -48,7 +48,7 @@ namespace Utility.Logging.Test
       var logger = testLogger.GetCurrentInstanceLogger();
 
       Assert.NotNull(logger);
-      Assert.AreEqual(GetType().Name, logger.Name);
+      Assert.AreEqual(GetType().FullName, logger.Name);
     }
 
     [Test]
@@ -60,7 +60,7 @@ namespace Utility.Logging.Test
       var logger = testLogger.GetLogger(GetType());
 
       Assert.NotNull(logger);
-      Assert.AreEqual(GetType().Name, logger.Name);
+      Assert.AreEqual(GetType().FullName, logger.Name);
     }
 
     [Test]
