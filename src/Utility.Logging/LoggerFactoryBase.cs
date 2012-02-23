@@ -19,7 +19,7 @@ namespace Utility.Logging
     public ILogger GetCurrentInstanceLogger(int skipFrames = 1)
     {
       // Go up one call on the frame and get the type that declares that method.
-      var stackFrame = new StackFrame(skipFrames, false);
+      var stackFrame = new StackFrame(skipFrames);
       return GetLogger(stackFrame.GetMethod().ReflectedType);
     }
 

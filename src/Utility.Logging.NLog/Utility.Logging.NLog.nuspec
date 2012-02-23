@@ -13,7 +13,14 @@
     <copyright>Copyright 2011</copyright>
     <tags>utility logging nlog</tags>
     <dependencies>
+      <dependency id="NLog" version="2.0.0"/>
       <dependency id="Utility.Logging" version="$version$"/>
     </dependencies>
   </metadata>
+  <files>
+    <file src="bin\Release\Utility.Logging.NLog.dll" target ="lib\net40"/>
+    <file src="bin\Release\Utility.Logging.NLog.pdb" target ="lib\net40"/>
+    <file src="bin\ReleaseSL5\Utility.Logging.NLog.dll" target ="lib\sl50"/>
+    <file src="bin\ReleaseSL5\Utility.Logging.NLog.pdb" target ="lib\sl50"/>
+  </files>
 </package>

@@ -13,11 +13,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog.Autofa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A1699005-DD22-4E6A-AED3-5A636B00B80D}"
 	ProjectSection(SolutionItems) = preProject
+		..\NugetPack.ps1 = ..\NugetPack.ps1
 		..\README.md = ..\README.md
 		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
+		Utility.Logging.NLog.Autofac\Utility.Logging.NLog.Autofac.nuspec = Utility.Logging.NLog.Autofac\Utility.Logging.NLog.Autofac.nuspec
+		Utility.Logging.NLog\Utility.Logging.NLog.nuspec = Utility.Logging.NLog\Utility.Logging.NLog.nuspec
+		Utility.Logging\Utility.Logging.nuspec = Utility.Logging\Utility.Logging.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog.Autofac.Test", "Utility.Logging.NLog.Autofac.Test\Utility.Logging.NLog.Autofac.Test.csproj", "{29A25C45-872E-4207-8B2D-E67800B33880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.LoggingSL5", "Utility.Logging\Utility.LoggingSL5.csproj", "{35105DB5-85E8-4EF6-9EC7-99DECAEE69F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight 5", "Silverlight 5", "{A32A7112-4A38-459A-9D39-C6D39E67E43E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLogSL5", "Utility.Logging.NLog\Utility.Logging.NLogSL5.csproj", "{11D9E927-E78F-4A4C-9C75-373B3F155132}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility.Logging.NLog.AutofacSL5", "Utility.Logging.NLog.Autofac\Utility.Logging.NLog.AutofacSL5.csproj", "{E46342FE-B5F1-4C95-B5C7-B20C4AA1BB27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,8 +61,25 @@ Global
 		{29A25C45-872E-4207-8B2D-E67800B33880}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29A25C45-872E-4207-8B2D-E67800B33880}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29A25C45-872E-4207-8B2D-E67800B33880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35105DB5-85E8-4EF6-9EC7-99DECAEE69F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35105DB5-85E8-4EF6-9EC7-99DECAEE69F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35105DB5-85E8-4EF6-9EC7-99DECAEE69F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35105DB5-85E8-4EF6-9EC7-99DECAEE69F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D9E927-E78F-4A4C-9C75-373B3F155132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D9E927-E78F-4A4C-9C75-373B3F155132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D9E927-E78F-4A4C-9C75-373B3F155132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D9E927-E78F-4A4C-9C75-373B3F155132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E46342FE-B5F1-4C95-B5C7-B20C4AA1BB27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E46342FE-B5F1-4C95-B5C7-B20C4AA1BB27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E46342FE-B5F1-4C95-B5C7-B20C4AA1BB27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E46342FE-B5F1-4C95-B5C7-B20C4AA1BB27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35105DB5-85E8-4EF6-9EC7-99DECAEE69F7} = {A32A7112-4A38-459A-9D39-C6D39E67E43E}
+		{11D9E927-E78F-4A4C-9C75-373B3F155132} = {A32A7112-4A38-459A-9D39-C6D39E67E43E}
+		{E46342FE-B5F1-4C95-B5C7-B20C4AA1BB27} = {A32A7112-4A38-459A-9D39-C6D39E67E43E}
 	EndGlobalSection
 EndGlobal
