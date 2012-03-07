@@ -13,16 +13,16 @@
     <copyright>Copyright 2011</copyright>
     <tags>utility logging nlog</tags>
     <dependencies>
-      <dependency id="Autofac" version="2.5.2"/>
+      <dependency id="Autofac" version="2.6.1"/>
       <dependency id="NLog" version="2.0.0"/>
       <dependency id="Utility.Logging" version="$version$" />
       <dependency id="Utility.Logging.NLog" version="$version$" />
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\Utility.Logging.NLog.Autofac.dll" target ="lib\net40"/>
-    <file src="bin\Release\Utility.Logging.NLog.Autofac.pdb" target ="lib\net40"/>
-    <file src="bin\ReleaseSL5\Utility.Logging.NLog.Autofac.dll" target ="lib\sl50"/>
-    <file src="bin\ReleaseSL5\Utility.Logging.NLog.Autofac.pdb" target ="lib\sl50"/>
+    <file src="..\src\Utility.Logging.NLog.Autofac\bin\Release\Utility.Logging.NLog.Autofac.dll" target="lib\net40"/>
+    <file src="..\src\Utility.Logging.NLog.Autofac\bin\Release\Utility.Logging.NLog.Autofac.pdb" target="lib\net40"/>
+    <file src="..\src\Utility.Logging.NLog.Autofac\bin\ReleaseSL5\Utility.Logging.NLog.Autofac.dll" target="lib\sl50"/>
+    <file src="..\src\Utility.Logging.NLog.Autofac\bin\ReleaseSL5\Utility.Logging.NLog.Autofac.pdb" target="lib\sl50"/>
   </files>
 </package>

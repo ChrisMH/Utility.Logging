@@ -14,9 +14,9 @@
     <tags>utility logging</tags>
   </metadata>
   <files>
-    <file src="bin\Release\Utility.Logging.dll" target ="lib\net40"/>
-    <file src="bin\Release\Utility.Logging.pdb" target ="lib\net40"/>
-    <file src="bin\ReleaseSL5\Utility.Logging.dll" target ="lib\sl50"/>
-    <file src="bin\ReleaseSL5\Utility.Logging.pdb" target ="lib\sl50"/>
+    <file src="..\src\Utility.Logging\bin\Release\Utility.Logging.dll" target ="lib\net40"/>
+    <file src="..\src\Utility.Logging\bin\Release\Utility.Logging.pdb" target ="lib\net40"/>
+    <file src="..\src\Utility.Logging\bin\ReleaseSL5\Utility.Logging.dll" target ="lib\sl50"/>
+    <file src="..\src\Utility.Logging\bin\ReleaseSL5\Utility.Logging.pdb" target ="lib\sl50"/>
   </files>
 </package>
