@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using Autofac;
 using Autofac.Core;
-using Autofac.Core.Activators.Reflection;
 
 namespace Utility.Logging.NLog.Autofac
 {
@@ -9,18 +8,10 @@ namespace Utility.Logging.NLog.Autofac
   {
     protected override void AttachToComponentRegistration(IComponentRegistry registry, IComponentRegistration registration)
     {
-      registration.Preparing += OnComponentPreparing;
-    }
-
-    static void OnComponentPreparing(object sender, PreparingEventArgs e)
-    {
-      if(e.Component.Activator.GetType() != typeof(ReflectionActivator)) return;
-
-      var t = e.Component.Activator.LimitType;
-      e.Parameters = e.Parameters.Union(new[]
-        {
-            new ResolvedParameter((p, c) => p.ParameterType == typeof(ILogger), (p, c) => c.Resolve<ILoggerFactory>().GetLogger(t))
-        });
+      registration.Preparing += (s, e) =>
+      {
+        e.Parameters = new [] { loggerParameter }.Concat(e.Parameters);
+      };
     }
 
     protected override void Load(ContainerBuilder builder)
@@ -29,5 +20,9 @@ namespace Utility.Logging.NLog.Autofac
         .As<ILoggerFactory>()
         .SingleInstance();
     }
+
+    private readonly Parameter loggerParameter =
+      new ResolvedParameter((p, c) => p.ParameterType == typeof(ILogger),
+                            (p, c) => c.Resolve<ILoggerFactory>().GetLogger(p.Member.DeclaringType));
   }
 }
