@@ -46,9 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=2.6.2.859, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+    <Reference Include="Autofac, Version=2.6.3.862, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Autofac.2.6.2.859\lib\SL4\Autofac.dll</HintPath>
+      <HintPath>..\packages\Autofac.2.6.3.862\lib\SL4\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="NLog">

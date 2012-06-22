@@ -13,9 +13,9 @@
     <copyright>Copyright 2011</copyright>
     <tags>utility logging nlog</tags>
     <dependencies>
-      <dependency id="Ninject" version="2.2.1.4" />
-      <dependency id="Utility.Logging" version="$version$" />
-      <dependency id="Utility.Logging.NLog" version="$version$" />
+      <dependency id="Ninject"/>
+      <dependency id="Utility.Logging"/>
+      <dependency id="Utility.Logging.NLog"/>
     </dependencies>
   </metadata>
   <files>

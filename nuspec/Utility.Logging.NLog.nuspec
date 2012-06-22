@@ -13,8 +13,8 @@
     <copyright>Copyright 2011</copyright>
     <tags>utility logging nlog</tags>
     <dependencies>
-      <dependency id="NLog" version="2.0.0"/>
-      <dependency id="Utility.Logging" version="$version$"/>
+      <dependency id="NLog"/>
+      <dependency id="Utility.Logging"/>
     </dependencies>
   </metadata>
   <files>
