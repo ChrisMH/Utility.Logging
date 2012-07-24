@@ -14,11 +14,14 @@
     <tags>utility logging nlog</tags>
     <dependencies>
       <dependency id="Ninject"/>
+      <dependency id="NLog"/>
       <dependency id="Utility.Logging"/>
       <dependency id="Utility.Logging.NLog"/>
     </dependencies>
   </metadata>
   <files>
-    <file src="content\*.*" target="content"/>
+    <file src="..\src\Utility.Logging.NLog.Ninject\content\*.*" target="content"/>
+    <file src="..\src\Utility.Logging.NLog.Ninject\bin\Release\Utility.Logging.NLog.Ninject.dll" target="lib\net40"/>
+    <file src="..\src\Utility.Logging.NLog.Ninject\bin\Release\Utility.Logging.NLog.Ninject.pdb" target="lib\net40"/>
   </files>
 </package>

@@ -3,10 +3,12 @@
                          '.\src\Utility.Logging.NLog\Utility.Logging.NLog.csproj',
                          '.\src\Utility.Logging.NLog\Utility.Logging.NLogSL5.csproj',
                          '.\src\Utility.Logging.NLog.Autofac\Utility.Logging.NLog.Autofac.csproj',
-                         '.\src\Utility.Logging.NLog.Autofac\Utility.Logging.NLog.AutofacSL5.csproj'
+                         '.\src\Utility.Logging.NLog.Autofac\Utility.Logging.NLog.AutofacSL5.csproj',
+                         '.\src\Utility.Logging.NLog.Autofac\Utility.Logging.NLog.Ninject.csproj'
 [string[]] $nuspecFiles = '.\nuspec\Utility.Logging.nuspec',
                           '.\nuspec\Utility.Logging.NLog.nuspec',
-                          '.\nuspec\Utility.Logging.NLog.Autofac.nuspec'
+                          '.\nuspec\Utility.Logging.NLog.Autofac.nuspec',
+                          '.\nuspec\Utility.Logging.NLog.Ninject.nuspec'
 $versionFile = '.\src\SharedAssemblyInfo.cs'
 
 $buildConfiguration = 'Release'
