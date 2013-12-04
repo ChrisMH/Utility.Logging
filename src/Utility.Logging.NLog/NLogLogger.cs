@@ -115,7 +115,7 @@ namespace Utility.Logging.NLog
     protected void Log(global::NLog.LogLevel logLevel, Exception exception, string message, params object[] parameters)
     {
       var logEvent = new global::NLog.LogEventInfo(logLevel, Name, null, message, parameters, exception);
-      logger.Log(logEvent);
+      logger.Log(typeof(NLogLogger), logEvent);
     }
 
     private readonly global::NLog.Logger logger;
