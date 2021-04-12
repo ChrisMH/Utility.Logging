@@ -5,3 +5,4 @@ build/
 *.suo
 *.dotCover
 src/.vs
+src/packages
