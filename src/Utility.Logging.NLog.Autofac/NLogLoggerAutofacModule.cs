@@ -1,12 +1,13 @@
 ﻿using System.Linq;
 using Autofac;
 using Autofac.Core;
+using Autofac.Core.Registration;
 
 namespace Utility.Logging.NLog.Autofac
 {
   public class NLogLoggerAutofacModule : Module
   {
-    protected override void AttachToComponentRegistration(IComponentRegistry registry, IComponentRegistration registration)
+    protected override void AttachToComponentRegistration(IComponentRegistryBuilder componentRegistry, IComponentRegistration registration)
     {
       registration.Preparing += (s, e) =>
       {

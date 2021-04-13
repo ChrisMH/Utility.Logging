@@ -4,3 +4,5 @@ build/
 *.user
 *.suo
 *.dotCover
+src/.vs
+src/packages
